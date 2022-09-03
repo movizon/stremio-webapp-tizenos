@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- include CAPH 3.0.1 default package -->
+	<link href="assets/libs/caph/3.0.1/caph.min.css" rel="stylesheet" />
+	<!-- include main styles -->
+	<link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1>CAPH List Sample <span style="font-size:70%">for jQuery</span></h1>
+			<br>
+			<div style="font-size:100%">
+				<div style="font-size: 1.5em;">CAPH scrollable list?</div>
+				<br>
+				Scrollable list is one of the most used component in TV
+				By using CAPH scrollable list, <br>you can easily develop high-performance scrollable list!
+				<ul>
+					<li><b>High Performance</b> : Scrolling is very fast </li>
+					<li><b>Customizable</b> : We provide list template and you can customize list &amp; various event
+						handlers</li>
+					<li><a href="/" target="_top"> More details, click here!</a></li>
+				</ul>
+
+			</div>
+			<div class="content">
+				<div class="list-container">
+					<div id="list1"></div>
+					<!--style="position: absolute; left: 380px; top: 130px;"-->
+				</div>
+				<div class="list-container">
+					<div id="list2"></div>
+					<!--style="position: absolute; left: 380px; top: 130px;"-->
+				</div>
+				<div style="font-style:italic">This sample is packaged based on caph 3.0.1<br> You can try the below
+					demo with arrows keys and mouse-over at the corner of the list. </div>
+				<br></br>
+				<h2>Let's try </h2>
+
+				<!-- Step1 -->
+				<div class="step-box">
+					<div class="title"><b>Step 1</b> Include the caph-jquery</div>
+					<div class="code">
+						&lt;script src="caph/3.0.1/caph-jquery.min.js"&gt; &lt;/script&gt;
+					</div>
+				</div>
+
+				<!-- Step2 -->
+				<div class="step-box">
+					<div class="title"><b>Step 2</b> Create div for <b>caphList</b></div>
+					<div class="code">
+						<b>&lt;div id="list1" style="position: absolute; left: 525px; top: 220px;"&gt;</b><br />
+						&nbsp;&nbsp;&nbsp;&nbsp;// Put the template here.<br />
+						<b>&lt;/div&gt;</b>
+					</div>
+				</div>
+
+				<!-- Step3 -->
+				<div class="step-box">
+					<div class="title"><b>Step 3</b> Set <b>attribute</b> for list</div>
+					<div class="code">
+						$('#list1').caphList({<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;template: '<b>&lt;div class="item item1" focusable&gt; <br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div
+							style="width:100%; height:100%; background-size:100% 100%;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:
+							url(<%= item.image %>)"&gt;&lt;/div&gt;&lt;/div&gt;</b>',<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;items : items,<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;containerClass : 'list',<br />
+						});
+					</div>
+				</div>
+
+				<!-- Step More -->
+				<div class="step-box">
+					<div class="title"><b>More..</b></div>
+					<div class="code">
+						caphList provides several event such as onReachStart, onReachEnd, onScrollStart .. etc<br />
+						Also, there are attributes can be set at caphList<br />
+						For more details, <b>please refer the api reference or development guide.</b>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<a class="info" style="text-decoration: none; font-size:20px;" href="./SimpleListforjQuery.zip">Click
+					link for download(SimpleListforjQuery.zip)</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- include jQuery file (you can use jQuery in your environment) -->
+	<SCRIPT src="assets/libs/caph/3.0.1/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></SCRIPT>
+	<script src="assets/libs/caph/3.0.1/bower_components/lodash/lodash.js" type="text/javascript"></script>
+	<!-- include the CAPH Package for jquery -->
+	<SCRIPT src="assets/libs/caph/3.0.1/caph-jquery.min.js"></SCRIPT>
+	<!-- include the custom libs -->
+	<SCRIPT src="assets/js/main.js"></SCRIPT>
+</body>
+
+</html>
